@@ -1,13 +1,14 @@
 #ifndef GRID_H
 #define GRID_H
 
+#include "cell.h"
 #include <stdexcept>
 #include <vector>
 
 class Grid {
   std::size_t width;
   std::size_t height;
-  std::vector<int> cells;
+  std::vector<Cell> cells;
 
   private:
     inline size_t index(size_t x, size_t y) const { return y * width + x; }
@@ -19,8 +20,8 @@ class Grid {
 
   public:
     explicit Grid(size_t init_width, size_t init_height);
-    int& get_cell(size_t x, size_t y);
-    const int& get_cell(size_t x, size_t y) const;
+    Cell& get_cell(size_t x, size_t y);
+    const Cell& get_cell(size_t x, size_t y) const;
     void set_cell(size_t x, size_t y, int value);
 };
 
