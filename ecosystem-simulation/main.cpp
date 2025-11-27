@@ -2,5 +2,7 @@
 #include <iostream>
 
 int main() {
-  std::cout << "Ecosystem Sim!";
+  Grid grid{50, 50};
+  grid.set_cell(15, 25, 100);
+  std::cout << grid.get_cell(15, 25) << std::endl;
 }
