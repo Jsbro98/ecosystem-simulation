@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="ecosystem-simulation/ecosystem-simulation.vcxproj" />
+  <Project Path="ecosystem-simulation/ecosystem-simulation.vcxproj" Id="74ec7005-3f1c-40e1-8818-1c687ed94977" />
 </Solution>
