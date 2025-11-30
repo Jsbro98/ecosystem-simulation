@@ -1,11 +1,14 @@
 #ifndef CELL_H
 #define CELL_H
 
-struct Cell {
-  int value;
-  bool occupied;
+#include "creature.h"
+#include <memory>
 
-  explicit inline Cell() : value(0), occupied(false) {}
+struct Cell {
+  std::unique_ptr<Creature> entity;
+
+  explicit inline Cell() : entity(nullptr) {}
+  inline bool is_occupied() const { return entity != nullptr; }
 };
 
 #endif  // CELL_H
