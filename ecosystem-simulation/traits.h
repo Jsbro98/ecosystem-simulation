@@ -9,6 +9,7 @@ namespace traits {
     int vision_radius;
 
     explicit Fixed(int repro_rate, int decay_rate, int sex, int vision);
+    Fixed() = delete;
   };
 
   struct Dynamic {
