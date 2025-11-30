@@ -2,6 +2,8 @@
 #define GRID_H
 
 #include "cell.h"
+#include "creature.h"
+#include <memory>
 #include <stdexcept>
 #include <vector>
 
@@ -22,7 +24,7 @@ class Grid {
     explicit Grid(size_t init_width, size_t init_height);
     Cell& get_cell(size_t x, size_t y);
     const Cell& get_cell(size_t x, size_t y) const;
-    void set_cell(size_t x, size_t y, int value);
+    void set_cell(size_t x, size_t y, std::unique_ptr<Creature> creature);
 };
 
 #endif  // GRID_H
