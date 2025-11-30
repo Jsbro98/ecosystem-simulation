@@ -1,23 +1,19 @@
 #ifndef CREATURE_H
 #define CREATURE_H
 
-class Creature {
- public:
-  struct Stats {
-    int reproductive_rate;
-    int decay_rate;
-    int sex;
-    int vision_radius;
-    int food;
-    int water;
-    int sleep;
-  };
+#include "traits.h"
 
+typedef traits::Fixed FixedProperties;
+typedef traits::Dynamic DynamicState;
+
+class Creature {
   protected:
-    Stats stats;
+    DynamicState dynamic;
+    FixedProperties fixed;
 
   public:
     virtual ~Creature() = default;
+    Creature(const FixedProperties& properties);
 };
 
 #endif  // CREATURE_H
