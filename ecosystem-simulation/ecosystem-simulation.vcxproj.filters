@@ -32,5 +32,8 @@
     <ClInclude Include="creature.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

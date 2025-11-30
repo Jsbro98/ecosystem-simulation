@@ -134,6 +134,7 @@
     <ClInclude Include="cell.h" />
     <ClInclude Include="creature.h" />
     <ClInclude Include="grid.h" />
+    <ClInclude Include="traits.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
