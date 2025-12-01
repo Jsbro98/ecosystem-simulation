@@ -13,8 +13,9 @@ class Creature {
 
   public:
     virtual ~Creature() = default;
-    explicit Creature(const FixedProperties& properties);
     Creature() = delete;
+
+    explicit Creature(const FixedProperties& properties);
 };
 
 #endif  // CREATURE_H
