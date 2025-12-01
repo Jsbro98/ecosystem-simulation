@@ -2,10 +2,13 @@
 #define TRAITS_H
 
 namespace traits {
-	struct Fixed {
+  enum class Sex { Male, Female };
+
+  struct Fixed {
+
     int reproductive_rate;
     int decay_rate;
-    int sex;
+    Sex sex;
     int vision_radius;
 
     explicit Fixed(int repro_rate, int decay_rate, int sex, int vision);
