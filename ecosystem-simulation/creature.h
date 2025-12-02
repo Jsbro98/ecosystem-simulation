@@ -15,7 +15,7 @@ class Creature {
     virtual ~Creature() = default;
     Creature() = delete;
 
-    inline explicit Creature(FixedProperties properties) : fixed(properties), dynamic() {};
+    inline explicit Creature(const FixedProperties& properties) : fixed(properties), dynamic() {};
 };
 
 #endif  // CREATURE_H
