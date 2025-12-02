@@ -35,5 +35,8 @@
     <ClInclude Include="traits.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="creature-tracker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
