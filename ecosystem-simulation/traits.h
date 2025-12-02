@@ -5,13 +5,16 @@ namespace traits {
   enum class Sex { Male, Female };
 
   struct Fixed {
-
     int reproductive_rate;
     int decay_rate;
     Sex sex;
     int vision_radius;
 
-    explicit Fixed(int repro_rate, int decay_rate, int sex, int vision);
+    inline explicit Fixed(int repro_rate, int decay_rate, Sex sex, int vision)
+        : reproductive_rate(repro_rate),
+          decay_rate(decay_rate),
+          sex(sex),
+          vision_radius(vision) {};
     Fixed() = delete;
   };
 
@@ -20,7 +23,7 @@ namespace traits {
     int water;
     int sleep;
 
-    explicit Dynamic();
+    inline explicit Dynamic() : food(100), water(100), sleep(100) {};
   };
 }
 
