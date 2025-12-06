@@ -11,6 +11,7 @@ class Grid {
   std::size_t width;
   std::size_t height;
   std::vector<Cell> cells;
+  std::vector<Creature*> active_creatures;
 
   private:
     inline size_t index(size_t x, size_t y) const { return y * width + x; }
@@ -26,5 +27,9 @@ class Grid {
     const Cell& get_cell(size_t x, size_t y) const;
     void set_cell(size_t x, size_t y, std::unique_ptr<Creature> creature);
 };
+
+// --- Function declarations ---
+
+void update_position(size_t x, size_t y, std::unique_ptr<Creature>& creature);
 
 #endif  // GRID_H

@@ -5,7 +5,7 @@
 #include <utility>
 
 Grid::Grid(size_t init_width, size_t init_height)
-	: width(init_width), height(init_height), cells(width * height) {}
+	: width(init_width), height(init_height), cells(width * height), active_creatures(100) {}
 
 Cell& Grid::get_cell(size_t x, size_t y) {
   check_bounds(x, y);
@@ -21,4 +21,14 @@ void Grid::set_cell(size_t x, size_t y, std::unique_ptr<Creature> creature) {
   check_bounds(x, y);
   Cell& current_cell{cells[index(x, y)]};
   current_cell.entity = std::move(creature);
+
+
+  update_position(x, y, current_cell.entity);
+}
+
+// -------- Helper Grid functions --------
+
+void update_position(size_t x, size_t y, std::unique_ptr<Creature>& creature) {
+  creature->get_position().x = x;
+  creature->get_position().y = y;
 }
