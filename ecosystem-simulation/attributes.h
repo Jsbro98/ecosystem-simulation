@@ -2,8 +2,8 @@
 
 namespace attributes {
   struct Position {
-    int x;
-    int y;
+    size_t x;
+    size_t y;
 
     inline Position() : x(0), y(0) {};
   };
