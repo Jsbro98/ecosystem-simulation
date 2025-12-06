@@ -13,13 +13,17 @@ class Creature {
     DynamicState dynamic;
     FixedProperties fixed;
     Position position;
+    bool active;
 
   public:
     virtual ~Creature() = default;
     Creature() = delete;
 
     inline explicit Creature(const FixedProperties& properties)
-      : fixed(properties), dynamic(), position() {};
+      : fixed(properties), dynamic(), position(), active(false) {};
+
+    inline Position& get_position() { return position; };
+    inline bool is_active() const { return active; };
 };
 
 #endif  // CREATURE_H
