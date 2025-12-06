@@ -7,7 +7,7 @@
 struct Cell {
   std::unique_ptr<Creature> entity;
 
-  explicit inline Cell() : entity(nullptr) {}
+  explicit inline Cell() : entity(nullptr) {};
   inline bool is_occupied() const { return entity != nullptr; }
 };
 
