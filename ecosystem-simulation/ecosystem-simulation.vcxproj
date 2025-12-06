@@ -131,6 +131,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="attributes.h" />
     <ClInclude Include="cell.h" />
     <ClInclude Include="creature-tracker.h" />
     <ClInclude Include="creature.h" />
