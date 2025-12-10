@@ -26,6 +26,12 @@ void Grid::set_cell(size_t x, size_t y, std::unique_ptr<Creature> creature) {
   update_position(x, y, current_cell.entity);
 }
 
+void Grid::add_to_active_creatures(const std::unique_ptr<Creature>& creature) {
+  if (!creature->is_active()) {
+    active_creatures.push_back(creature.get());
+  }
+}
+
 // -------- Helper Grid functions --------
 
 void update_position(size_t x, size_t y, std::unique_ptr<Creature>& creature) {

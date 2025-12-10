@@ -26,6 +26,7 @@ class Grid {
     Cell& get_cell(size_t x, size_t y);
     const Cell& get_cell(size_t x, size_t y) const;
     void set_cell(size_t x, size_t y, std::unique_ptr<Creature> creature);
+    void add_to_active_creatures(const std::unique_ptr<Creature>& creature);
 };
 
 // --- Function declarations ---
