@@ -1,3 +1,4 @@
+#include "attributes.h"
 #include "cell.h"
 #include "creature.h"
 #include "grid.h"
@@ -35,6 +36,8 @@ void Grid::add_to_active_creatures(const std::unique_ptr<Creature>& creature) {
 // -------- Helper Grid functions --------
 
 void update_position(size_t x, size_t y, std::unique_ptr<Creature>& creature) {
-  creature->get_position().x = x;
-  creature->get_position().y = y;
+  Position& creature_pos{creature->get_position()};
+
+  creature_pos.x = x;
+  creature_pos.y = y;
 }
