@@ -47,5 +47,8 @@
     <ClInclude Include="predator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="herbivore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
