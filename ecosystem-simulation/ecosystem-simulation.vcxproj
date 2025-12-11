@@ -137,6 +137,7 @@
     <ClInclude Include="creature.h" />
     <ClInclude Include="grid.h" />
     <ClInclude Include="plant.h" />
+    <ClInclude Include="predator.h" />
     <ClInclude Include="traits.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

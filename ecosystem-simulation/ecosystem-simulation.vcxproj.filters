@@ -44,5 +44,8 @@
     <ClInclude Include="plant.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="predator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
